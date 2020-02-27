@@ -1,0 +1,251 @@
+
+body {
+    font-family: sans-serif;
+}
+
+.header-conteiner {
+    background: $colorYellow;
+    padding-left: 15px;
+    margin-bottom: 30px;
+    @include bigComponentStyle();
+    @media (max-width: $maxWigth) {
+        height: 250px;
+        }
+
+    .site-name {
+        margin: 0 0 0 0;
+
+        @media (max-width: $maxWigth) {
+            text-align: center;
+            margin: 11px 0 0 0;
+        }
+    }
+
+    .social-subscribe {
+        height: 20px;
+        margin-left: auto;
+
+        @media (max-width: $maxWigth) {
+            margin: 0 auto;
+            padding-top: 10px;
+            text-align: center;
+        }
+    }
+
+    .subbscribe {
+        margin: 15px 15px 5px 0;
+        min-height: 20px;
+
+        @media (max-width: $maxWigth) {
+            margin: 15px 0px 5px 0;
+        } 
+    }
+
+    .layout {
+        display: flex;
+        align-items: center;
+        
+
+        @media (max-width: $maxWigth) {
+            flex-wrap: wrap;
+        }
+    }
+    .logo-site {
+        padding: 24px;
+    }
+}
+
+.control-panel {
+    @include bigComponentStyle();
+}
+
+
+.logo-site {
+    @media (max-width: $maxWigth) {
+        display: none;
+    }
+    .logo {
+        width: 60px;
+        color: $colorRed;
+        margin-top: 24px;
+    }
+}
+
+.site-name {
+    color: $color-header;
+    font-family: $NewFont;
+
+    .title {
+        font-size: 27px;
+        margin-bottom: 5px;
+    }
+
+    .description {
+        font-size: 16px;
+        margin-top: 14px;
+    }
+}
+
+.button-save {
+    background: $colorRed; 
+    border-radius: 13px;
+    font-family: $NewFont;
+    color: $colorYellow;
+    text-decoration: none;
+    padding: 5px 11px;
+    font-size: 14px;
+    font-weight: normal;
+    cursor: pointer;
+    border: 0;
+    transition: background 0.5s;
+
+    &:hover {
+        background: lighten($colorRed, 40%);
+        color: $colorGreyDark;
+        transition: 0.5s;
+        
+    }
+    
+    &.-big {
+        font-size: 18px;
+        font-weight: normal;
+        border-radius: 20px;
+        font-family: sans-serif;
+    }
+}
+
+.color-choise {
+    font-family: $NewFont;
+
+    .title {
+        margin-bottom: 10px;
+        font-size: 17px;
+        font-weight: bold;
+    }
+
+    .selectColor {
+        border: solid 1px $colorBorder;
+        border-radius: 5px;
+        padding: 3px;
+        font-size: 0.9em;
+    }
+}
+
+.single-calendar {
+    color: $colorGreyDark;
+    font-family: $NewFont;
+    margin-top: 15px;
+    margin-left: $calendar-gap;
+
+
+    .deleteCalendar, 
+    .addCalendar {
+        visibility: hidden;
+        
+        &:hover {
+            color: $colorRed;
+        }
+    }
+
+    &:hover .deleteCalendar,
+    &:hover .addCalendar {
+        visibility: visible;
+        cursor: pointer;
+        font-size: 15px;
+    }
+
+    .weekdays {
+        color: lighten($colorGreyDark, 50%);
+    }
+
+    .daynumber {
+        padding: 15px 8px 15px 8px;
+        font-weight: bold;
+        text-align: center;
+    }
+
+    .daynumber:hover {
+        background: $colorYellow;
+        color: $colorRed;
+        cursor: pointer;
+    }
+
+    .daynumber:last-child,
+    .dayname:last-child {
+        color: $colorRed;
+    }
+
+    .dayname {
+        text-align: center;
+    }
+
+    .monthName {
+        text-align: center;
+        font-weight: bold;
+        font-size: x-large;
+        margin-bottom: 15px;
+        color: $color-header;
+    }
+
+    .calendar {
+        border: solid 1px $color-header;
+        border-radius: 10px;
+        padding: 15px 10px;
+        width: 269px;
+    }
+}
+
+.calendar-list {
+    padding: 0px 10px;
+
+    .layout {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        margin-left: -$calendar-gap;
+    }
+}
+
+.register-region {
+    background: black url("\../img/121-min.jpg") center no-repeat;
+    background-size: cover;
+    padding: 50px 0;
+    margin: 50px 0;
+    .form-normal {
+        opacity: 0;
+        transition: 1s;
+    }
+
+    &:hover .form-normal {
+        animation: showgorm 1s;
+        opacity: 1;
+        transition: 1s;
+    }
+}
+
+.form-normal {
+    .input, .select {
+        border: 1px solid $colorGreyDark;
+        box-shadow: 2px -3px 19px 1px ;
+        margin: 12px auto;
+        display: block;
+        width: 220px;
+        height: 33px;
+        box-sizing: border-box;
+     }
+    .checkbox {
+        cursor: pointer;
+        display: block;
+        width: 220px;
+        color: black;
+        margin: 12px auto;
+    }
+
+    .submit {
+        display: block;
+        width: 220px;
+        margin: 12px auto;
+        height: 33px;
+    } 
+}
+

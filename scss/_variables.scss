@@ -1,0 +1,17 @@
+$font-header: 'Roboto Condensed', sans-serif;
+$NewFont: 'Pacifico', cursive;
+
+
+$colorBorder: rgb(189, 189, 189);
+$colorYellow: #fef0d5;
+$colorRed: #d81e5d;
+$color-header: #235c55;
+$colorGreyDark: #535154;
+
+$maxWigth: 450px;
+
+
+$calendar-gap: 50px;
+@mixin bigComponentStyle {
+    padding: 0 10px;
+}
